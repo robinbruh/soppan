@@ -1,0 +1,60 @@
+[gd_scene load_steps=10 format=3 uid="uid://cx2h6akvekewv"]
+
+[ext_resource type="Script" path="res://script/mvp/root_node3d/world.gd" id="1_e2pif"]
+[ext_resource type="PackedScene" uid="uid://cgitq5peeas3c" path="res://prefabs/mvp/player/player.tscn" id="1_f584c"]
+[ext_resource type="PackedScene" uid="uid://ddh6mq1qk0j0i" path="res://prefabs/mvp/enemy/enemy.tscn" id="2_2wphe"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_nvft7"]
+vertices = PackedVector3Array(0, 0.5, -9.5, -9.5, 0.5, 0, -9.5, 0.5, 9.5, 0, 0.5, 9.5, 9.5, 0.5, 0, 9.5, 0.5, -9.5, 0, 0.5, 9.5, 9.5, 0.5, 9.5, 9.5, 0.5, 0, 0, 0.5, -9.5, -9.5, 0.5, -9.5, -9.5, 0.5, 0)
+polygons = [PackedInt32Array(5, 4, 0), PackedInt32Array(0, 4, 3), PackedInt32Array(0, 3, 1), PackedInt32Array(1, 3, 2), PackedInt32Array(8, 7, 6), PackedInt32Array(11, 10, 9)]
+agent_height = 2.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_g6kav"]
+size = Vector2(20, 20)
+subdivide_width = 1
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_d0gdn"]
+data = PackedVector3Array(10, 0, 10, 0, 0, 10, 10, 0, -10, 0, 0, 10, 0, 0, -10, 10, 0, -10, 0, 0, 10, -10, 0, 10, 0, 0, -10, -10, 0, 10, -10, 0, -10, 0, 0, -10)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pjs5o"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_7io3n"]
+sky_material = SubResource("ProceduralSkyMaterial_pjs5o")
+
+[sub_resource type="Environment" id="Environment_xmyo8"]
+background_mode = 2
+sky = SubResource("Sky_7io3n")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_e2pif")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("1_f584c")]
+
+[node name="Enemy" parent="." instance=ExtResource("2_2wphe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.85234, -0.0138799, -6.30627)
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_nvft7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D"]
+mesh = SubResource("PlaneMesh_g6kav")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_d0gdn")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="NavigationRegion3D"]
+environment = SubResource("Environment_xmyo8")
+
+[node name="Enemy2" parent="." instance=ExtResource("2_2wphe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.89935, -0.0138799, -6.83081)

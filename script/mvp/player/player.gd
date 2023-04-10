@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 
 const SPEED = 5.0
-const JUMP_VELOCITY = 4.5
+const JUMP_VELOCITY = 2
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -53,7 +53,7 @@ func _physics_process(delta):
 	
 func cameraRotation():
 	var target_rotation = Vector3(0, 0, 0)
-	const ROTATION_SPEED = 0.5
+	const ROTATION_SPEED = 1
 	#remove rotation when both are pressed
 	if Input.is_action_pressed("right") && Input.is_action_pressed("left"):
 		target_rotation.z = 0
