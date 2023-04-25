@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://ccbg5nkhk2wta" path="res://assets/models/oliver-zon/oliver-zon.glb" id="1_s17rd"]
 [ext_resource type="PackedScene" uid="uid://cgitq5peeas3c" path="res://prefabs/mvp/player/player.tscn" id="2_qvwdj"]
 [ext_resource type="PackedScene" uid="uid://bnymmn8gyh8vn" path="res://prefabs/tree/tree.tscn" id="3_ianrp"]
-[ext_resource type="PackedScene" path="res://assets/models/oliver-zon/rock.glb" id="4_6h5u3"]
+[ext_resource type="PackedScene" uid="uid://dmdgltt385uix" path="res://assets/models/oliver-zon/rock.glb" id="4_6h5u3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1nyif"]
 sky_top_color = Color(0, 0, 0, 1)
