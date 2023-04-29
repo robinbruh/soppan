@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://cy2fm33iikhab"]
 
-[ext_resource type="PackedScene" path="res://modules/entity/player/player.tscn" id="1_mblmi"]
+[ext_resource type="PackedScene" uid="uid://bxi4435268gmc" path="res://modules/entity/player/player.tscn" id="1_mblmi"]
 [ext_resource type="PackedScene" uid="uid://ccbg5nkhk2wta" path="res://modules/map/level/oliver-zon/oliver-zon.glb" id="2_168k3"]
 [ext_resource type="PackedScene" uid="uid://5s2aujj2buq3" path="res://modules/map/objects/tree/tree.tscn" id="3_uc7qp"]
 [ext_resource type="PackedScene" uid="uid://dmdgltt385uix" path="res://modules/map/objects/rock/rock.glb" id="4_5hdt5"]

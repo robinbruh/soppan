@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3]
+[gd_scene load_steps=11 format=3 uid="uid://bxi4435268gmc"]
 
 [ext_resource type="Script" path="res://modules/entity/player/player.gd" id="1_0hm4p"]
 [ext_resource type="Script" path="res://modules/entity/player/weapon/weapon.gd" id="3_kxmyb"]
@@ -70,6 +70,7 @@ _data = {
 
 [node name="Player" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+collision_layer = 2
 script = ExtResource("1_0hm4p")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -105,3 +106,22 @@ spot_angle = 35.1562
 
 [node name="RayCast3D" type="RayCast3D" parent="Neck/Camera3D"]
 target_position = Vector3(0, 0, -200)
+
+[node name="InteractRay" type="RayCast3D" parent="Neck/Camera3D"]
+target_position = Vector3(0, 0, -2.5)
+collision_mask = 4
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.556863)
