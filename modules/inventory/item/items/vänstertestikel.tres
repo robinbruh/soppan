@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://modules/inventory/item/item_data.gd" id="1_k6m50"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qkkbp"]
+load_path = "res://.godot/imported/item.png-97cb99f498aff682f02e61ac9ac1fd80.s3tc.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jorta"]
+atlas = SubResource("CompressedTexture2D_qkkbp")
+region = Rect2(64, 0, 64, 64)
+
+[resource]
+script = ExtResource("1_k6m50")
+name = ""
+description = ""
+stackable = false
+texture = SubResource("AtlasTexture_jorta")

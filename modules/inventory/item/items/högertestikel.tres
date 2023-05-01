@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://b0s5q0hnl6gnd"]
+
+[ext_resource type="Script" path="res://modules/inventory/item/item_data.gd" id="1_qxbfq"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qkkbp"]
+load_path = "res://.godot/imported/item.png-97cb99f498aff682f02e61ac9ac1fd80.s3tc.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u2ddi"]
+atlas = SubResource("CompressedTexture2D_qkkbp")
+region = Rect2(128, 0, 64, 64)
+
+[resource]
+script = ExtResource("1_qxbfq")
+name = "Högertestikel"
+description = "Olivers högra testikel."
+stackable = false
+texture = SubResource("AtlasTexture_u2ddi")

@@ -1,8 +1,8 @@
-[gd_scene load_steps=10 format=3]
+[gd_scene load_steps=10 format=3 uid="uid://mjvamyjs6nal"]
 
 [ext_resource type="Script" path="res://modules/map/level/mvp/world.gd" id="1_e2pif"]
 [ext_resource type="PackedScene" path="res://modules/entity/player/player.tscn" id="1_f584c"]
-[ext_resource type="PackedScene" path="res://modules/entity/enemy/enemy.tscn" id="2_2wphe"]
+[ext_resource type="PackedScene" uid="uid://b6gtqphn322ub" path="res://modules/entity/enemy/enemy.tscn" id="2_2wphe"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_nvft7"]
 vertices = PackedVector3Array(0, 0.5, -9.5, -9.5, 0.5, 0, -9.5, 0.5, 9.5, 0, 0.5, 9.5, 9.5, 0.5, 0, 9.5, 0.5, -9.5, 0, 0.5, 9.5, 9.5, 0.5, 9.5, 9.5, 0.5, 0, 0, 0.5, -9.5, -9.5, 0.5, -9.5, -9.5, 0.5, 0)
