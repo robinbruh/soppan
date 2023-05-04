@@ -1,0 +1,8 @@
+[
+	[
+		{"name":"Oskar","text":"Hej och välkomna till Sommarflörten allesammans!","voice":"res://modules/dialog/voice/Oskar/1.mp3"}
+	],
+	[
+		{"name":"Oskar","text":"Hej och INTE välkomna till Sommarflörten allesammans!","voice":"res://modules/dialog/voice/Oskar/1.mp3"}
+	]
+]
