@@ -1,7 +1,6 @@
 [gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://dqulokcvqbfh3"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qkkbp"]
-load_path = "res://.godot/imported/item.png-97cb99f498aff682f02e61ac9ac1fd80.s3tc.ctex"
 
 [resource]
 atlas = SubResource("CompressedTexture2D_qkkbp")
