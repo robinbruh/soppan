@@ -18,6 +18,7 @@ config/icon="res://modules/entity/enemy/pissflaska.jpeg"
 [autoload]
 
 PlayerManager="*res://modules/entity/player/player_manager.gd"
+Dialogues="*res://modules/dialog/dialogues.gd"
 
 [display]
 
